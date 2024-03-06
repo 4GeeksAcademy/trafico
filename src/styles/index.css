@@ -10,3 +10,19 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.traffic-L{
+    background: black;
+    padding: 10px;
+    display: inline-block;
+    margin: auto;
+}
+
+.luz{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+.red{background: red;}
+.yellow{background: yellow;}
+.green{ background: green;}
