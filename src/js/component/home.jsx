@@ -1,29 +1,28 @@
-
 import React, {useState} from "react";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
 //create your first component
-const Home = () => {
+export function Home (){
+    const [selectorColor, setselectorColor] = useState ("ColRojo");
+    return(
+        <>
+        <div className="semaforo">
+        <div
+          onClick={() => setselectorColor("ColRojo")} // Actualiza el estado con "ColRojo"
+          className={`light ColRojo ${selectorColor === "ColRojo" && "glow"}`} // Clases condicionales
+        >
+          a
+        </div>
+            <div onClick={()=> selectorColor("ColAmarillo")} className={"light ColAmarillo" + (setselectorColor === "ColAmarillo"? "glow" : "") }>b</div>
+            <div onClick={()=> selectorColor("ColVerde")} className={"light ColVerde" + (setselectorColor === "ColVerde"? "glow" : "") }>c</div>
+        </div></>
+   
 
 
 
-	
-	return (
-		
-				<div className="traffic-L">
-					<div className="luz red"></div>
-					<div className="luz yellow"></div>
-					<div className="luz green"></div>
-				</div>					
-			
 
+    
 
-
-
-
-	)}
-		
-
+    );
+}
 export default Home;
+
